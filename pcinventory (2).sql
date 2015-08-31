@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 31, 2015 at 03:05 AM
+-- Generation Time: Aug 25, 2015 at 09:57 AM
 -- Server version: 5.6.25
 -- PHP Version: 5.5.27
 
@@ -33,21 +33,22 @@ CREATE TABLE IF NOT EXISTS `employees` (
   `empcompanyid` varchar(50) NOT NULL,
   `empphoto` varchar(250) NOT NULL,
   `empstatus` tinyint(4) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=81 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `employees`
 --
 
 INSERT INTO `employees` (`id`, `empfirstname`, `emplastname`, `empcompanyid`, `empphoto`, `empstatus`) VALUES
-(71, 'ghjghj', 'ghjghj', 'ghjghjgh', 'dog.jpg', 1),
-(72, 'dfgdfg', 'dgdfgdf', 'dgdfg', '', 1),
-(73, 'fhfgh', 'fghfgh', 'ffghfghfg', '', 1),
-(74, 'fghfgh', 'fghfghfgh', 'fghfghg', '', 1),
-(75, 'fhfgh', 'fghfh', 'fghfghfg', '', 1),
-(76, 'fhgfh', 'fghfgh', 'fghgfhgf', '', 1),
-(77, 'mmmmmmmmmmmmmm', 'mmmmmmmmmmmmmm', 'mmmm', '', 1),
-(78, 'tuy', 'yuyuy', 'uuuuu', '', 1);
+(3, 'Kate', 'Edoloverio', 'FDC0812067', 'ROG_TYTAN_CG8480.jpg', 1),
+(13, 'Karen Kate', 'Gepanaga', 'ererer', 'picture.jpg', 2),
+(14, 'John Robert', 'Jerodiaz', 'asds', 'img.jpg', 2),
+(15, 'John Mart', 'Belamide', 'dfd', 'user.png', 2),
+(35, 'test', 'test', 'test', 'dog.jpg', 1),
+(37, 'Tsuchiya', 'Tsuchiya', 'FDC-CH017', 'flow colour hd abstract desktop wallpaper.jpg', 1),
+(39, 'katesss', 'Tsuchiya', 'FDC-CH017', 'abstract-hd-wallpapers-1920x1080.jpg', 2),
+(41, 'katesss', 'Tsuchiya', 'FDC-CH017', 'flow colour hd abstract desktop wallpaper.jpg', 1),
+(42, 'test', 'test', 'test', 'download.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -62,19 +63,18 @@ CREATE TABLE IF NOT EXISTS `gadgets` (
   `ggserial` varchar(100) NOT NULL,
   `ggstatus` tinyint(4) NOT NULL,
   `ggavailability` tinyint(4) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `gadgets`
 --
 
 INSERT INTO `gadgets` (`id`, `ggpropertyno`, `ggdescription`, `ggserial`, `ggstatus`, `ggavailability`) VALUES
-(18, 'kkkkkk', 'kkkkkk', 'kkkkkkvvvvvvvv', 2, 2),
-(19, 'vbvb', 'bnbvnvbn', 'vbnvbn', 2, 2),
-(20, 'nnnnnn', 'nnnnnn', 'nnnnnn', 1, 1),
-(21, 'dfgfd', 'dfgfdg', 'dfgfg', 1, 1),
-(22, 'dfgfdg', 'fdgf', 'dfgdfg', 1, 1),
-(23, 'dfgf', 'dfdgf', 'ddfgf', 1, 1);
+(18, 'q', 'q', 'q', 1, 1),
+(19, 'df', 'dfd', 'dfdf', 1, 1),
+(30, '', 'g', 'g', 1, 1),
+(31, '', 'g', 'g', 1, 1),
+(33, 'h', 'h', 'h', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -89,7 +89,7 @@ CREATE TABLE IF NOT EXISTS `headsets` (
   `hsstatus` tinyint(4) NOT NULL,
   `hstype` tinyint(4) NOT NULL,
   `hsavailability` tinyint(4) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `headsets`
@@ -138,8 +138,8 @@ CREATE TABLE IF NOT EXISTS `inventories` (
 --
 
 INSERT INTO `inventories` (`id`, `employee_id`, `systemunit_id`, `monitor_id`, `videocard_id`, `mouse_id`, `keyboard_id`, `headset_id`, `speaker_id`, `up_id`, `os_id`, `pcosserialno`, `pcadditionalinfo`, `pcstatus`, `pctype`, `pcavailability`, `pcreceivedate`) VALUES
-(3, 13, 6, '3', 2, 1, 4, 2, 2, 0, 0, 'none', 'none', 2, 0, 1, '2015-04-04'),
-(5, 37, 9, '9', 2, 3, 6, 3, 1, 3, 0, 'none', 'none', 2, 1, 1, '2015-10-10');
+(3, 3, 2, '3,2', 2, 1, 2, 0, 0, 0, 0, 'none', 'none', 2, 0, 1, '2015-04-04'),
+(5, 15, 2, '3', 2, 0, 2, 0, 0, 3, 0, 'none', 'none', 2, 1, 1, '2015-10-10');
 
 -- --------------------------------------------------------
 
@@ -154,7 +154,7 @@ CREATE TABLE IF NOT EXISTS `keyboards` (
   `kbstatus` tinyint(4) NOT NULL,
   `kbtype` tinyint(4) NOT NULL,
   `kbavailability` tinyint(4) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `keyboards`
@@ -175,27 +175,6 @@ INSERT INTO `keyboards` (`id`, `kbpropertyno`, `kbdescription`, `kbstatus`, `kbt
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mains`
---
-
-CREATE TABLE IF NOT EXISTS `mains` (
-  `id` int(11) NOT NULL,
-  `user` varchar(100) NOT NULL,
-  `mouse_propertyno` varchar(100) NOT NULL,
-  `monitor_propertyno` varchar(100) NOT NULL,
-  `keyboard_propertyno` varchar(100) NOT NULL,
-  `systemunit_propertyno` varchar(100) NOT NULL,
-  `videocard_propertyno` varchar(100) NOT NULL,
-  `speaker_propertyno` varchar(100) NOT NULL,
-  `headset_propertyno` varchar(100) NOT NULL,
-  `os` mediumtext NOT NULL,
-  `os_serial` varchar(100) NOT NULL,
-  `additionalinfo` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `mice`
 --
 
@@ -206,7 +185,7 @@ CREATE TABLE IF NOT EXISTS `mice` (
   `msstatus` tinyint(4) NOT NULL,
   `mstype` tinyint(4) NOT NULL,
   `msavailability` tinyint(4) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `mice`
@@ -237,7 +216,7 @@ CREATE TABLE IF NOT EXISTS `monitors` (
   `mostatus` tinyint(4) NOT NULL,
   `motype` tinyint(4) NOT NULL,
   `moavailability` tinyint(4) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `monitors`
@@ -249,16 +228,24 @@ INSERT INTO `monitors` (`id`, `mopropertyno`, `modescription`, `mostatus`, `moty
 (6, 'FDC-MO003', 'Samsung LS22D390HS/XP 21.5 inches LED Monitor Black w/ HDMI', 1, 1, 1),
 (7, 'FDC-MO004', 'Samsung LS22D390HS/XP 21.5 inches LED Monitor Black w/ HDMI', 1, 1, 1),
 (8, 'FDC-MO005', 'Samsung LS22D390HS/XP 21.5 inches LED Monitor Black w/ HDMI', 1, 1, 1),
+(9, 'FDC-MO006', 'Acer V236HL 23 LED Backlight Desktop Monitor (Black)', 1, 1, 1),
 (11, 'FDC-MO008', 'Samsung LS22D390HS/XP 21.5 inches LED Monitor Black w/ HDMI', 1, 1, 1),
+(12, 'FDC-MO009', 'Samsung LS22D390HS/XP 21.5 inches LED Monitor Black w/ HDMI', 1, 1, 1),
+(13, 'FDC-MO0101', 'Acer V236HL 23 LED Backlight Desktop Monitor (Black)', 1, 0, 1),
+(14, 'FDC-MO011', 'Viewsonic 20 VA2046A LED Widescreen Black', 1, 1, 1),
+(15, 'FDC-MO012', 'Dell E Series E2011H 20 Widescreen Flat Panel Monitor with LED Display', 1, 1, 1),
 (16, 'FDC-MO013', 'ACER S191HQL 18.5 WIDESCREEN LED MONITOR', 2, 1, 1),
 (17, 'FDC-MO014', 'Samsung LS19A100 18.5 LED Monitor', 1, 2, 1),
+(18, '', '', 1, 1, 1),
+(19, '', '', 1, 1, 1),
+(20, '', '', 1, 1, 1),
+(21, '', '', 1, 1, 1),
 (22, 'cvcv', '', 1, 1, 1),
 (23, 'rrrr', 'fg', 1, 1, 1),
 (24, '', '', 1, 1, 1),
 (25, '', '', 1, 1, 1),
-(26, 'jjjjj', 'jjjjj', 1, 1, 1),
-(27, 'FDC-MO0011', 'dfdfd', 1, 1, 1),
-(28, 'test', 'test', 2, 2, 2);
+(26, 'o', 'o', 1, 1, 1),
+(27, 'FDC-MO0011', 'dfdfd', 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -315,22 +302,6 @@ INSERT INTO `products` (`id`, `name`, `details`, `available`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `properties`
---
-
-CREATE TABLE IF NOT EXISTS `properties` (
-  `id` int(11) NOT NULL,
-  `classification` varchar(100) NOT NULL,
-  `description` varchar(200) NOT NULL,
-  `status` tinyint(4) NOT NULL,
-  `type` tinyint(4) NOT NULL,
-  `availability` tinyint(4) NOT NULL,
-  `propertyno` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `speakers`
 --
 
@@ -364,20 +335,21 @@ CREATE TABLE IF NOT EXISTS `systemunits` (
   `sustatus` tinyint(4) NOT NULL,
   `sutype` tinyint(4) NOT NULL,
   `suavailability` tinyint(4) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `systemunits`
 --
 
 INSERT INTO `systemunits` (`id`, `supropertyno`, `sudescription`, `sustatus`, `sutype`, `suavailability`) VALUES
-(3, 'FDC-SU0022', 'Biostar H81MHV3', 1, 2, 1),
+(3, 'FDC-SU002', 'Biostar H81MHV3', 1, 1, 1),
 (4, 'FDC-SU003', 'Gigabyte GA-H61M-DS2', 1, 1, 1),
 (5, 'FDC-SU004', 'ASRock B75M', 1, 1, 1),
 (6, 'FDC-SU005', 'Biostar H81MHV3', 1, 1, 1),
 (7, 'FDC-SU006', 'Gigabyte GA-H61M-DS2', 1, 1, 1),
 (8, 'FDC-SU007', 'Biostar H81MHV3', 1, 1, 1),
-(9, 'FDC-SU008', 'ASUSTek COMPUTER INC. P8H61-M LX3 PLUS R2.0', 1, 2, 2);
+(9, 'FDC-SU008', 'ASUSTek COMPUTER INC. P8H61-M LX3 PLUS R2.0', 1, 2, 2),
+(10, '', '', 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -477,12 +449,6 @@ ALTER TABLE `keyboards`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `mains`
---
-ALTER TABLE `mains`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `mice`
 --
 ALTER TABLE `mice`
@@ -504,12 +470,6 @@ ALTER TABLE `pages`
 -- Indexes for table `products`
 --
 ALTER TABLE `products`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `properties`
---
-ALTER TABLE `properties`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -550,17 +510,17 @@ ALTER TABLE `videocards`
 -- AUTO_INCREMENT for table `employees`
 --
 ALTER TABLE `employees`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=81;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=43;
 --
 -- AUTO_INCREMENT for table `gadgets`
 --
 ALTER TABLE `gadgets`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=36;
 --
 -- AUTO_INCREMENT for table `headsets`
 --
 ALTER TABLE `headsets`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT for table `inventories`
 --
@@ -570,32 +530,22 @@ ALTER TABLE `inventories`
 -- AUTO_INCREMENT for table `keyboards`
 --
 ALTER TABLE `keyboards`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
---
--- AUTO_INCREMENT for table `mains`
---
-ALTER TABLE `mains`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT for table `mice`
 --
 ALTER TABLE `mice`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT for table `monitors`
 --
 ALTER TABLE `monitors`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=28;
 --
 -- AUTO_INCREMENT for table `pages`
 --
 ALTER TABLE `pages`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT for table `properties`
---
-ALTER TABLE `properties`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `speakers`
 --
@@ -605,7 +555,7 @@ ALTER TABLE `speakers`
 -- AUTO_INCREMENT for table `systemunits`
 --
 ALTER TABLE `systemunits`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `ups`
 --
